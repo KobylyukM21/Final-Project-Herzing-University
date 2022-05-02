@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Final Project
+
+      Author: Maksim Kobylyuk
+      Date: 3/10/22
+
+      Filename: indexFinal.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Ukrainian Culture </title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+   <script>
+      function submitfn1 ()
+      {
+         var OnePass = document.getElementById("OnePass");
+         var TwoPass = document.getElementById("TwoPass");
+         var ThreePass = document.getElementById("ThreePass");
+         var cost = 1219;
+         var multi2 = 2
+         var multi3 = 3
+   
+         if (OnePass.checked==true)
+            alert("Estimated cost of flight is: $1219.00");
+         else if(TwoPass.checked==true)
+            alert("Estimated cost of flight is: "+"$" +cost * multi2+".00");
+         else if(ThreePass.checked==true)
+            alert("Estimated cost of flight is: "+"$" +cost * multi3+".00");
+         else
+            alert("Select an option");
+      }
+   </script>
+   <header>
+      <h1>
+         Welcome to the Ukrainian Culture!
+      </h1>
+   </header> 
+   <nav>
+      <a style="text-decoration:none" href="indexFinal.htm">&emsp;&emsp;&emsp;Home</a>
+      <a style="text-decoration:none" href="PicturesFinal.html">&emsp;&emsp;&emsp;Pictures</a>
+      <a style="text-decoration:none" href="LocationsFinal.html">&emsp;&emsp;&emsp;Locations</a>
+      <a style="text-decoration:none" href="AboutFinal.html">&emsp;&emsp;&emsp;About</a>
+      <a style="text-decoration:none" href="SecurityFinal.html">&emsp;&emsp;&emsp;Security</a>
+   </nav>
+   <article id="Welcome">
+      <h2>
+         Ukrainian Locations
+      </h2>
+   </article>
+   <article id="CostOfFlight">
+      <h4>
+         Please select one of the options below to get the estimated cost to fly to Ukraine from the USA.+
+      </h4>
+      <form id="TextBoxes"><br>
+         <input id="OnePass" name="grp1" type="radio" value="One Passenger">One Passengers
+         <input id="TwoPass" name="grp1" type="radio" value="Two Passengers">Two Passengers
+         <input id="ThreePass" name="grp1" type="radio" value="Three Passengers">Three Passengers<br><br>
+         <button onclick="submitfn1()" id="SubmitButton">Submit</button>
+      </form>
+   </article>
+   <article id="UkiMap">
+      <h3>
+         Map of Ukraine
+      </h3>
+      <img src="UkraineMap.jpg" alt="Ukraine Map"> 
+   </article>
+</body>
+</html>

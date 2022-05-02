@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Final Project
+
+      Author: Maksim Kobylyuk
+      Date: 3/10/22
+
+      Filename: indexFinal.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Ukrainian Culture </title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="FinalProjectWebsite.js"></script>
+</head>
+<body>
+   <script>
+      function ageCalculator() { 
+         var userinput = document.getElementById("DOB").value;  
+         var dob = new Date(userinput);
+         if(userinput==null || userinput=='') {
+            document.getElementById("message").innerHTML = "Choose a date please";
+            return false;
+         } else {
+            var month_diff = Date.now() - dob.getTime();
+            var age_dt = new Date(month_diff);
+            var year = age_dt.getUTCFullYear();
+            var age = Math.abs(year - 1970);
+            return window.alert("Age is: " + age + " years.");
+         }
+      }
+   </script>
+   
+   <header>
+      <h1>
+         Welcome to the Ukrainian Culture!
+      </h1>
+   </header> 
+   <nav>
+      <a style="text-decoration:none" href="indexFinal.htm">&emsp;&emsp;&emsp;Home</a>
+      <a style="text-decoration:none" href="PicturesFinal.html">&emsp;&emsp;&emsp;Pictures</a>
+      <a style="text-decoration:none" href="LocationsFinal.html">&emsp;&emsp;&emsp;Locations</a>
+      <a style="text-decoration:none" href="AboutFinal.html">&emsp;&emsp;&emsp;About</a>
+      <a style="text-decoration:none" href="SecurityFinal.html">&emsp;&emsp;&emsp;Security</a>
+   </nav>
+   <article id="Welcome">
+      <h2>
+         Ukrainian Culture
+      </h2>
+   </article>
+   <article id="ExtAge">
+      <h3>Exact Age Calculator</h3>
+   </article>
+   <div id="main_container"></div>
+   <article id="AgeCal">
+      <h3>Calculate Age</h3>
+      <b>Enter Date of Birth: <input type=date id=DOB></b>
+      <span id = "message"></span><br>
+      <button type="submit" onclick="ageCalculator()">Calculate age</button>
+   </article>
+   <article id='FeedbackForm'>
+      <h4>Feedback Form</h4>
+   </article>
+   <article id='Options'>
+      <h5>Please select all of the options that describes this website.</h5>
+      <select multiple id="choice">
+         <option>Fast</option>
+         <option>Easy to use</option>
+         <option>Reliable</option>
+         <option>Slow</option>
+         <option>Unreliable</option>
+      </select>
+   </article>
+   <article id="FormResults">
+      <button type="submit" onclick="convertArrayToString()">Submit</button>
+      <p id="result">Results</p>
+   </article>
+   <script>
+      var select = document.getElementById('choice');
+      var selectionsArray = [];
+      var paragraph = document.getElementById('result');
+      // This function will add or remove items from selectionArry based on their selection
+      function optionSelected(option){
+         if(selectionsArray.includes(option.text)){
+            selectionsArray.splice(selectionsArray.indexOf(option.text), 1);
+         }else {
+            selectionsArray.push(option.text);
+         }
+      }
+      // Five onclick event handlers
+      select.options[0].onclick = function () {
+         optionSelected(select.options[0]);
+      };
+      select.options[1].onclick = function () {
+         optionSelected(select.options[1]);
+      };
+      select.options[2].onclick = function () {
+         optionSelected(select.options[2]);
+      };
+      select.options[3].onclick = function () {
+         optionSelected(select.options[3]);
+      };
+      select.options[4].onclick = function () {
+         optionSelected(select.options[4]);
+      };
+
+      function convertArrayToString() {
+         if(selectionsArray.length === 0){
+            paragraph.innerHTML = "No element sleected";
+         } else {
+            var string = "Selected elements are ";
+            for (var i = 0; i < selectionsArray.length; i++){
+               string = string + selectionsArray[i] + ",";
+               }
+               paragraph.innerHTML = string;
+         }
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+/*  JavaScript 6th Edition
+    Chapter 1
+    Hands-on Project 1-1
+
+    Filename: styles.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+a:link {
+   color: black;
+}
+
+a:visited {
+   color: red;
+}
+
+a:hover {
+   color: purple;
+}
+
+a:active {
+   color: blue;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   background: white;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+ol, ul {
+   list-style: none;
+}
+
+#Welcome {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+/* applies only to id "main" */
+#main {
+   background-color: #808080;
+   margin-top: 5px;
+   margin-left: 5px;
+   margin-right: 5px;
+   border-radius: 20px;
+   padding: 10px;
+   text-align: center;
+}
+
+#CostOfFlight {
+   background-color: #005BBB;
+   font-size: 24px;
+   text-align: center;
+   width: auto;
+   margin-top: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+#SubmitButton {
+   text-align: center;
+   font-size: 35px;
+   background-color: #00FF00;
+   color: #FFFFFF;
+   border-radius: 7px;
+}
+
+#UkiMap {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+
+}
+
+#UkiPic {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#UkiAbout {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#UkiSec {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#UkiSecFacts {
+   background-color: #005BBB;
+   font-size: 24px;
+   text-align: center;
+   width: auto;
+   margin-top: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+#demo {
+   text-align: left;
+   font-size: 16px;
+}
+
+#SecFacts {
+   background-color: #FFD500;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   font-size: 14px;
+   color: black;
+}
+
+#Summary {
+   color: black;
+}
+
+#ExtAge {
+   background-color: #005BBB;
+   margin-top: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   font-size: 25px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+#AgeCal {
+   font-size: 20px;
+   text-align: center;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+#FeedbackForm {
+   background-color: #005BBB;
+   margin-top: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   font-size: 30px;
+   text-align: center;
+}
+
+#Options {
+   font-size: 20px;;
+}
+
+#result {
+   font-size: 30px;
+   margin-top: 15px;
+}
+
+#FormResults {
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+#EmailHand {
+   margin-top: 15px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   background-color: #005BBB;
+   font-size: 25px;
+}
+
+
+/* page header */
+header {
+   background: #005BBB; /* Header Color */
+   width: auto; /* Header Width */
+   color: #FFFFFF; /* Text Color */
+   font-size: 80px;
+   font-family: Lucida Sans;
+   font-style: italic;
+   text-align: center;
+   line-height: 1.5em; /* Header Height */
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   margin-top: 25px;
+   margin-left: 25px;
+   margin-right: 25px;
+   max-width: auto;
+}
+
+/* Navigation Header */
+nav {
+   background: #FFD500;
+   width: auto;
+   font-size: 24px;
+   color: #FFFFFF;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-left: 25px;
+   margin-right: 25px;
+   max-width: auto;
+}
+
+/* main content */
+article {
+   background: #FFD500;
+   font-size: 48px;
+   color: #FFFFFF;
+   text-align: Center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 25px;
+   margin-left: 25px;
+   margin-right: 25px;
+}
+
+body {
+   background-color: black;
+}
+
+select {
+   margin-top: 20px;
+}
+
+#UkiIMG1 {
+   background-color: #005BBB;
+   margin-top: 20px;
+   text-align: center;
+   padding: 20px;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+
+#UkiIMG2 {
+   background-color: #FFD500;
+   text-align: center;
+   padding: 20px;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+}

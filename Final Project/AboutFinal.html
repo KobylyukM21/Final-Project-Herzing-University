@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Final Project
+
+      Author: Maksim Kobylyuk
+      Date: 3/10/22
+
+      Filename: indexFinal.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Ukrainian Culture </title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+   <header>
+      <h1>
+         Welcome to the Ukrainian Culture!
+      </h1>
+   </header> 
+   <nav>
+      <a style="text-decoration:none" href="indexFinal.htm">&emsp;&emsp;&emsp;Home</a>
+      <a style="text-decoration:none" href="PicturesFinal.html">&emsp;&emsp;&emsp;Pictures</a>
+      <a style="text-decoration:none" href="LocationsFinal.html">&emsp;&emsp;&emsp;Locations</a>
+      <a style="text-decoration:none" href="AboutFinal.html">&emsp;&emsp;&emsp;About</a>
+      <a style="text-decoration:none" href="SecurityFinal.html">&emsp;&emsp;&emsp;Security</a>
+   </nav>
+   <article id="UkiAbout">
+      <h2>
+         About Ukraine
+      </h2>
+   </article>
+   <form action="#" onsubmit="validate()">
+   <article id="EmailHand">
+      <h3>
+         Enter your email.
+      </h3>
+      <input type="text" name="email" id="email"/>
+      <div id="email_error"></div>
+      <div>
+         <input type="radio" name="gender" id="gender_male" value="male"/> Male
+         <input type="radio" name="gender" id="gender_female" value="female"/> Female
+         <div id="gender_error"></div>
+      </div>
+      <input type="submit" value="submit">
+   </article>
+   </form>
+
+   <script>
+      const email = document.querySelector("#email");
+      const emailError = document.querySelector("#email_error");
+      email.addEventListener("input", () => reset(emailError));
+      const genderMale = document.querySelector("#gender_male");
+      const genderFemale = document.querySelector("#gender_female");
+      const genderError = document.querySelector("#gender_error");
+      genderMale.addEventListener("input", () => reset(genderError));
+      genderFemale.addEventListener("input", () => reset(genderError));
+
+      function validate() {
+         let res = true;
+         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) === false){
+            emailError.innerHTML = "invalid email address";
+            res = falsel
+         }
+         if ((genderMale.checked || genderFemale.checked) == false){
+            genderError.innerHTML = "Please Select a Gender";
+            res = false;
+         }
+         console.log(res);
+         return res;
+      }
+      function reset(element){
+         element.innerHTML = "";
+      }
+   </script>
+</body>
+</html>

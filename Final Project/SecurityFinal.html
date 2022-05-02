@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Final Project
+
+      Author: Maksim Kobylyuk
+      Date: 3/10/22
+
+      Filename: SecurityFinal.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Ukrainian Culture </title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+   <header>
+      <h1>
+         Welcome to the Ukrainian Culture!
+      </h1>
+   </header> 
+   <nav>
+      <a style="text-decoration:none" href="indexFinal.htm">&emsp;&emsp;&emsp;Home</a>
+      <a style="text-decoration:none" href="PicturesFinal.html">&emsp;&emsp;&emsp;Pictures</a>
+      <a style="text-decoration:none" href="LocationsFinal.html">&emsp;&emsp;&emsp;Locations</a>
+      <a style="text-decoration:none" href="AboutFinal.html">&emsp;&emsp;&emsp;About</a>
+      <a style="text-decoration:none" href="SecurityFinal.html">&emsp;&emsp;&emsp;Security</a>
+   </nav>
+   <article id="UkiSec">
+       <h2>
+           Security Facts
+       </h2>
+   </article>
+   <article id="UkiSecFacts">
+    <form>
+        <div id="demo"></div>
+        <h6>
+        <script>
+            let text = "<p>Browser CodeName: " + navigator.appCodeName + "</p>" +
+            "<p>Browser Name: " + navigator.appName + "</p>" +
+            "<p>Browser Version: " + navigator.appVersion + "</p>" +
+            "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>" +
+            "<p>Browser Language: " + navigator.language + "</p>" +
+            "<p>Browser Online: " + navigator.onLine + "</p>" +
+            "<p>Platform: " + navigator.platform + "</p>" +
+            "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+            document.getElementById("demo").innerHTML = text;
+        </script>
+        </h6>
+    </form>
+   </article>
+   <article id="SecFacts">
+       <h3>Security Facts</h3><br>
+            <p>Top 10 Internet Safety Rules & What Not to Do Online. usa.kaspersky.com. Retrieved 25 March 2022, 
+            from <a href="https://usa.kaspersky.com/resource-center/preemptive-safety/top-10-internet-safety-rules-and-what-not-to-do-online.">
+                https://usa.kaspersky.com/resource-center/preemptive-safety/top-10-internet-safety-rules-and-what-not-to-do-online.</a></p><br>
+            <p>This article talks about 10 safety rules and the do's and dont's when surfing the web.</p><br>
+
+           <p>TechCrunch is part of the Yahoo family of brands. Techcrunch.com. Retrieved 25 March 2022, 
+               from <a href="https://techcrunch.com/2018/12/25/cybersecurity-101-guide-browse-web-securely-privately/.">
+                   https://techcrunch.com/2018/12/25/cybersecurity-101-guide-browse-web-securely-privately/.</a></p><br>
+            <p>This article talks about different ways you can safely and privately search the web.</p><br>
+
+           <p>Best Practices for How to Safely Browse. Webroot.com. Retrieved 25 March 2022, 
+               from <a href="https://www.webroot.com/us/en/resources/tips-articles/online-activities-internet-security.">
+                   https://www.webroot.com/us/en/resources/tips-articles/online-activities-internet-security.</a></p><br>
+            <p>This article talks about the best practices for safely browser the web.</p>
+            </article>
+</body>
+</html>
